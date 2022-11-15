@@ -101,24 +101,3 @@ function capEachWord(input) {
 
 capEachWord(sentence1)
 capEachWord(sentence2)
-
-
-
-
-// var sentence = "I really enjoyed mod0 - Kaitlyn is the best!"
-
-// var sentenceSplit = sentence.split(' ')
-
-// var newSentence = ""
-
-// for (i = 0; i < sentenceSplit.length; i++) {
-//     var capLetter = sentenceSplit[i].charAt(0).toUpperCase()
-//     var eachWord = sentenceSplit[i]
-//     var eachLetter = eachWord.split('')
-//     eachLetter.shift()
-//     eachLetter.unshift(capLetter)
-//     var capWord = eachLetter.join('')
-//     newSentence += capWord + " "
-// }
-
-// console.log(newSentence)
