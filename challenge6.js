@@ -82,22 +82,39 @@
 
 // FINAL EXPRESSION!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-var sentence1 = "I really enjoyed mod0 - Kaitlyn is the best!"
-var sentence2 = "Wow, this challenge really threw me for a loop!"
+// var sentence1 = "I really enjoyed mod0 - Kaitlyn is the best!"
+// var sentence2 = "Wow, this challenge really threw me for a loop!"
+
+// function capEachWord(input) {
+//     var sentenceSplit = input.split(' ')
+//     var newSentence = ""
+//         for (i = 0; i < sentenceSplit.length; i++) {
+//             var capLetter = sentenceSplit[i].charAt(0).toUpperCase()
+//             var eachLetter = sentenceSplit[i].split('')
+//             eachLetter.shift()
+//             eachLetter.unshift(capLetter)
+//             var capWord = eachLetter.join('')
+//             newSentence += capWord + " "
+//         }
+//     console.log(newSentence)
+// }
+
+// capEachWord(sentence1)
+// capEachWord(sentence2)
+
+// Kaitlyn's more concise solution:
+
+let sentence1 = "Let's try this out!"
 
 function capEachWord(input) {
     var sentenceSplit = input.split(' ')
-    var newSentence = ""
+    var newSentence = []
         for (i = 0; i < sentenceSplit.length; i++) {
             var capLetter = sentenceSplit[i].charAt(0).toUpperCase()
-            var eachLetter = sentenceSplit[i].split('')
-            eachLetter.shift()
-            eachLetter.unshift(capLetter)
-            var capWord = eachLetter.join('')
-            newSentence += capWord + " "
+            var capWord = capLetter + sentenceSplit[i].slice(1)
+            newSentence.push(capWord)
         }
-    console.log(newSentence)
+    return newSentence.join(' ')
 }
 
-capEachWord(sentence1)
-capEachWord(sentence2)
+console.log(capEachWord(sentence1))
